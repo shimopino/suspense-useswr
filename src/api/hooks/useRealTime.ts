@@ -11,8 +11,9 @@ const getRealTime = async (path: string) => {
   return response.data;
 };
 
-export const useRealTime = () => {
-  const { data, mutate } = useSWR("/realTime", (path) => getRealTime(path), {
+export const useRealTime = (key?: string) => {
+  const path = key ? `/realTime?${key}` : "/realTime";
+  const { data, mutate } = useSWR(path, (path) => getRealTime(path), {
     // デフォルトでは無効（=0）が設定されている
     // 数値が設定されていれば、ミリ秒単位でポーリングする
     // refreshInterval: 1000,

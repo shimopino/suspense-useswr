@@ -1,7 +1,7 @@
 import { useRealTime } from "../api/hooks/useRealTime";
 
-export const RealTime = () => {
-  const { current, mutate } = useRealTime();
+export const RealTime = ({ serializedKey }: { serializedKey?: string }) => {
+  const { current, mutate } = useRealTime(serializedKey);
 
   const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     mutate();

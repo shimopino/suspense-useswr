@@ -1,5 +1,4 @@
 import useSWR from "swr";
-import { userModel } from "../../mocks/models/user";
 import { client } from "../client";
 
 type UsersResponse = {
