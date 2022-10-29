@@ -1,7 +1,4 @@
 import { rest } from "msw";
+import { userModel } from "./models/user";
 
-export const handlers = [
-  rest.get("/user", (req, res, ctx) => {
-    return res(ctx.status(200));
-  }),
-];
+export const handlers = [...userModel.user.toHandlers("rest")];
