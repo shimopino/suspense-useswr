@@ -16,7 +16,9 @@ export const useRealTime = () => {
     "/realTime",
     (path) => getRealTime(path),
     {
-      refreshInterval: 1000,
+      // デフォルトでは無効（=0）が設定されている
+      // 数値が設定されていれば、ミリ秒単位でポーリングする
+      // refreshInterval: 1000,
     }
   );
 
