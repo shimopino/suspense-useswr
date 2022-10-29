@@ -1,0 +1,93 @@
+/*
+  リセットCSSを適用する
+  ベースは下記を参照している
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+/*
+  1. box-sizingモデルを使用する
+     これで余白と境界線も含めて親要素の幅と高さで決定される
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. デフォルトマージンの除去
+     ブラウザがデフォルトで使用するマージンを無効にする
+     これで h1 などに設定されている余白が消える
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. パーセントでの高さ指定を行う
+     CSSでは横幅は親要素の幅によって決定される。しかし、縦幅は子要素の高さで決まる
+     全体をあらかじめ100％に設定することで、トップレベルの要素の高さ100％が設定できる
+
+     ここで 100vh を使用していないのはこの単位がモバイルデバイスでうまく動作しないからである
+     画面上の 100% 以上の領域を占有してしまうことがある
+     将来的には dvh, lvh, svh などの要素を使用するかもしれない
+
+     https://dev.to/frehner/css-vh-dvh-lvh-svh-and-vw-units-27k4
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}

@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import "./reset.module.scss";
 
 const prepare = async () => {
   if (import.meta.env.DEV) {

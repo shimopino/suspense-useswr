@@ -1,7 +1,7 @@
 import { factory, primaryKey } from "@mswjs/data";
 import { faker } from "@faker-js/faker";
 
-const initialUserCount = 20;
+const initialUserCount = 5;
 
 export const userModel = factory({
   user: {
