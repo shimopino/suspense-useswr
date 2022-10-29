@@ -16,9 +16,9 @@ export const getUsers = async (path: string) => {
 };
 
 export const useUsers = () => {
-  const { data, mutate, ...rest } = useSWR("/users", (path) => getUsers(path), {
+  const { data, mutate } = useSWR("/users", (path) => getUsers(path), {
     suspense: true,
   });
 
-  return { users: data, mutate, ...rest };
+  return { users: data, mutate };
 };
