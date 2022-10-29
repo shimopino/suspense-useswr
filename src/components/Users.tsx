@@ -16,6 +16,7 @@ export const Users = () => {
             <span>{user.name}</span>
             <span>{user.email}</span>
             <span>{user.age}</span>
+            <span>{user.birthDate}</span>
           </div>
         );
       })}

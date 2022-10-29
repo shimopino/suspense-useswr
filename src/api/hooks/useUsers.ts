@@ -6,6 +6,7 @@ type UsersResponse = {
   name: string;
   email: string;
   age: number;
+  birthDate: string;
 };
 
 type UseSWRConfig = {
