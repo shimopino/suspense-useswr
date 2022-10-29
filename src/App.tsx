@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
+import { client } from "./api/useUsers";
 
 function App() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    fetch("/users")
-      .then((res) => res.json())
-      .then((data) => console.log(data));
+    client("/users", { method: "GET" }).then((res) => console.log(res.data));
   }, []);
 
   return <div className="App">検証用</div>;
