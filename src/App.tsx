@@ -14,7 +14,10 @@ function App() {
         <h2>同じAPIに対して、異なるキーを設定している場合</h2>
         <RealTime serializedKey="another" />
       </div>
-      <Users />
+      <div>
+        <h2>静的なデータを取得している場合</h2>
+        <Users />
+      </div>
     </>
   );
 }
