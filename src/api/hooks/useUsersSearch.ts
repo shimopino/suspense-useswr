@@ -56,7 +56,15 @@ export const useUsersSaerch = (body: SearchUsersBody) => {
     { suspense: true }
   );
 
+  const searchUpdate = (body: SearchUsersBody) => {
+    return mutate(async (prevResult) => {
+      const response = await searchUsers(body);
+      return response;
+    }, false);
+  };
+
   return {
     users: data,
+    searchUpdate,
   };
 };
