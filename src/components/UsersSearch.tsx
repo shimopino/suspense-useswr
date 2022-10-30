@@ -132,7 +132,6 @@ export const UsersSearch = () => {
           //   onChange={(e) => console.log("maxAge", typeof e.target.value)}
         />
         {errors.maxAge?.message && <p>{errors.maxAge?.message}</p>}
-        <button type="submit">送信</button>
       </form>
     </>
   );

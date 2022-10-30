@@ -32,7 +32,7 @@ function App() {
         <Users />
       </Card>
       <Card>
-        <h2>動的に検索を行う場合</h2>
+        <h2>動的に検索を行う場合（onChange）</h2>
         <UsersSearch />
       </Card>
     </>
